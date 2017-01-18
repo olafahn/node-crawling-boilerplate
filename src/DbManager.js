@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import HtmlResponse from './models/HtmlResponse';
 
 class DbManager {
-  constructor() {
+  constructor(mongoDbUri: string) {
     console.log('DbManager initialize started');
     // init
     this.db = mongoose.connection;
@@ -12,7 +12,8 @@ class DbManager {
       this.isDbConnected = true;
       console.log('DbManager db connected!');
     });
-    mongoose.connect('mongodb://localhost/mongodb_tutorial');
+    // mongoose.connect('mongodb://localhost/mongodb_tutorial');
+    mongoose.connect(mongoDbUri);
     console.log('DbManager initialized successfully!');
     // bindings
     this.saveHtmlResponse = this.saveHtmlResponse.bind(this);
@@ -57,6 +58,4 @@ class DbManager {
   }
 }
 
-const dbManager = new DbManager();
-
-module.exports = dbManager;
+module.exports = DbManager;
