@@ -1,4 +1,4 @@
-# Node Crawling Bolierplate
+# Node Crawling Boilerplate
 
 > Powered by eslint, babel, flowtype, mongodb, mongoose, request *(request-promise-native)*
 
@@ -6,7 +6,7 @@
 
 ```shell
 npm install -g babel
-git clone git@github.com:olafahn/node-crawling-bolierplate.git --width=1
+git clone git@github.com:olafahn/node-crawling-boilerplate.git --width=1
 cd node-crawling-boilerplate
 npm install
 ```
