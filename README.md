@@ -20,6 +20,8 @@ cd /path/to/this/boilerplate
 npm run babel
 ```
 
+Watch command will make javascript codes runnable in normal node even if the code uses ES6 or flowtype by using Babel transpiler. This script will watch the file diff under `src` dir, then transpile sources into `build` dir.
+
 ### Execution command
 
 ```shell
