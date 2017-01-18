@@ -1,0 +1,166 @@
+{
+  "name": "node-crawling-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "babel --watch=./src --out-dir=./build",
+    "start": "node build/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "env": {
+      "node": true,
+      "mocha": true,
+      "es6": true
+    },
+    "plugins": [
+      "flowtype"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 5,
+      "sourceType": "module"
+    },
+    "rules": {
+      "arrow-parens": [
+        "error",
+        "always"
+      ],
+      "arrow-body-style": [
+        2,
+        "as-needed"
+      ],
+      "comma-dangle": [
+        2,
+        "always-multiline"
+      ],
+      "import/imports-first": 0,
+      "import/newline-after-import": 0,
+      "import/no-extraneous-dependencies": 0,
+      "import/no-named-as-default": 0,
+      "import/no-unresolved": 2,
+      "import/prefer-default-export": 0,
+      "indent": [
+        2,
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "array-callback-return": 0,
+      "max-len": 0,
+      "newline-per-chained-call": 0,
+      "no-console": 0,
+      "no-use-before-define": 0,
+      "prefer-template": 2,
+      "class-methods-use-this": 0,
+      "require-yield": 0,
+      "flowtype/boolean-style": [
+        2,
+        "boolean"
+      ],
+      "flowtype/define-flow-type": 1,
+      "flowtype/delimiter-dangle": [
+        2,
+        "always-multiline"
+      ],
+      "flowtype/generic-spacing": [
+        2,
+        "never"
+      ],
+      "flowtype/no-primitive-constructor-types": 2,
+      "flowtype/no-weak-types": 0,
+      "flowtype/object-type-delimiter": [
+        2,
+        "comma"
+      ],
+      "flowtype/require-parameter-type": [
+        2,
+        {
+          "excludeArrowFunctions": "expressionsOnly"
+        }
+      ],
+      "flowtype/require-return-type": [
+        2,
+        "always",
+        {
+          "annotateUndefined": "never",
+          "excludeArrowFunctions": "expressionsOnly"
+        }
+      ],
+      "flowtype/require-valid-file-annotation": 2,
+      "flowtype/semi": [
+        2,
+        "always"
+      ],
+      "flowtype/space-after-type-colon": [
+        2,
+        "always"
+      ],
+      "flowtype/space-before-generic-bracket": [
+        2,
+        "never"
+      ],
+      "flowtype/space-before-type-colon": [
+        2,
+        "never"
+      ],
+      "flowtype/type-id-match": [
+        2,
+        "^([A-Z][a-z0-9]+)+Type$"
+      ],
+      "flowtype/union-intersection-spacing": [
+        2,
+        "always"
+      ],
+      "flowtype/use-flow-type": 1,
+      "flowtype/valid-syntax": 1
+    },
+    "settings": {
+      "import/resolver": {
+        "webpack": {
+          "config": "./internals/webpack/webpack.test.babel.js"
+        }
+      },
+      "flowtype": {
+        "onlyFilesWithFlowAnnotation": true
+      }
+    }
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "transform-flow-strip-types"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-transform-flow-strip-types": "^6.21.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-flowtype": "^2.30.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cheerio": "^0.22.0",
+    "flow-bin": "^0.37.4",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.7.7",
+    "request": "^2.79.0",
+    "request-promise-native": "^1.0.3",
+    "sha1": "^1.1.1",
+    "sprintf-js": "^1.0.3",
+    "underscore.string": "^3.3.4"
+  }
+}
