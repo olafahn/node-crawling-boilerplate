@@ -1,14 +1,14 @@
 // @flow
-import DbManager from './DbManager';
+import DbAdapter from './DbAdapter';
 import Fetcher from './Fetcher';
 
-const dbManager = new DbManager('mongodb://localhost/mongodb_tutorial');
+const dbAdapter = new DbAdapter('mongodb://localhost/mongodb_tutorial');
 
 setTimeout(() => {
-  console.log(dbManager.isDbConnected);
+  console.log(dbAdapter.isDbConnected);
   Fetcher.fetch('http://naver.com').then(console.log, console.log);
 }, 500);
 
 setTimeout(() => {
-  dbManager.close();
+  dbAdapter.close();
 }, 1000);

@@ -2,7 +2,7 @@
 import mongoose from 'mongoose';
 import HtmlResponse from './models/HtmlResponse';
 
-class DbManager {
+class DbAdapter {
   constructor(mongoDbUri: string) {
     console.log('DbManager initialize started');
     // init
@@ -58,4 +58,4 @@ class DbManager {
   }
 }
 
-module.exports = DbManager;
+module.exports = DbAdapter;
