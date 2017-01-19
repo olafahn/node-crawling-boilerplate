@@ -7,4 +7,4 @@ const htmlResponse = new Schema({
   created_at: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model('htmlResponse', htmlResponse);
+export default mongoose.model('htmlResponse', htmlResponse);

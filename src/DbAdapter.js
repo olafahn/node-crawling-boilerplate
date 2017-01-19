@@ -58,4 +58,4 @@ class DbAdapter {
   }
 }
 
-module.exports = DbAdapter;
+export default DbAdapter;
