@@ -11,7 +11,7 @@ class Fetcher {
     console.log('fetch', url);
     const p = new Promise((resolve: Function, reject: Function) => {
       HtmlResponse.findOne({ url }, (err: any, htmlResponse: any) => {
-        console.log('htmlResponse', htmlResponse);
+        // console.log('htmlResponse', htmlResponse);
 
         if (err) {
           console.log('err', err);
@@ -33,7 +33,7 @@ class Fetcher {
         } else {
           // cache hitda hit
           console.log(`cache hit! ${url}`);
-          console.log('resolve', htmlResponse.body);
+          console.log('resolve', htmlResponse.body.substr(0, 100));
           resolve(htmlResponse.body);
         }
       });

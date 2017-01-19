@@ -41,7 +41,7 @@ class DbAdapter {
 
   // implementations
   saveHtmlResponse(url: string, body: string) {
-    console.log('saveHtmlResponse', url);
+    console.log('saveHtmlResponse', url.substr(0, 100));
     if (!this.isDbConnected) throw url; // TODO better exception
     const html = new HtmlResponse();
     html.url = url;

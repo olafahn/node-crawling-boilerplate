@@ -11,7 +11,13 @@ setTimeout(() => {
     GithubPageParser.parse(res);
   }, console.log);
 }, 500);
+// setTimeout(() => {
+//   console.log(dbAdapter.isDbConnected);
+//   dbAdapter.getHtmlResponses().then((list: Array<*>) => {
+//     console.log('list', JSON.stringify(list, null, 2));
+//   });
+// }, 500);
 
 setTimeout(() => {
   dbAdapter.close();
-}, 1500);
+}, 3000);
