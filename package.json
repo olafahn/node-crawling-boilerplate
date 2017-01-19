@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "babel --watch=./src --out-dir=./build",
-    "start": "node build/index.js"
+    "start": "node build/index.js",
+    "output": "node build/index.js > output.txt"
   },
   "author": "",
   "license": "ISC",
