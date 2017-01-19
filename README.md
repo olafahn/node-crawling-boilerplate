@@ -1,6 +1,6 @@
 # Node Crawling Boilerplate
 
-> Powered by eslint, babel, flowtype, mongodb, mongoose, request *(request-promise-native)*
+> Powered by eslint, babel, flowtype, mongodb, mongoose, cheerio, request *(request-promise-native)*
 
 ## How to Install
 
