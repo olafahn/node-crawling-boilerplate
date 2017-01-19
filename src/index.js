@@ -3,7 +3,7 @@ import DbAdapter from './DbAdapter';
 import Fetcher from './Fetcher';
 import GithubPageParser from './parsers/GithubPageParser';
 
-const dbAdapter = new DbAdapter('mongodb://localhost/mongodb_tutorial');
+const dbAdapter = DbAdapter.getInstance('mongodb://localhost/mongodb_tutorial');
 
 setTimeout(() => {
   console.log(dbAdapter.isDbConnected);

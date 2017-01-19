@@ -2,7 +2,16 @@
 import mongoose from 'mongoose';
 import HtmlResponse from './models/HtmlResponse';
 
+const dbAdapterInstances = {};
 class DbAdapter {
+  static getInstance(uri: string): any {
+    if (dbAdapterInstances[uri] === undefined) {
+      const dbAdapter = new DbAdapter(uri);
+      dbAdapterInstances[uri] = dbAdapter;
+      return dbAdapter;
+    }
+    return dbAdapterInstances[uri];
+  }
   constructor(mongoDbUri: string) {
     console.log('DbManager initialize started');
     // init

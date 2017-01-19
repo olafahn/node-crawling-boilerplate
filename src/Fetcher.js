@@ -4,6 +4,7 @@
 // import { isFileExists } from './utils';
 import rp from 'request-promise-native';
 import HtmlResponse from './models/HtmlResponse';
+// import DbAdapter from './DbAdapter';
 
 class Fetcher {
   fetch(url: string): Promise<*> {
