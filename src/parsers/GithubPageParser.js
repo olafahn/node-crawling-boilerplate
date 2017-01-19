@@ -1,6 +1,6 @@
 // @flow
 import cheerio from 'cheerio';
-// import type { Parser } from '../Parser';
+import type { Parser } from '../Parser';
 
 class GithubPageParser {
   parse(htmlBody: string): any {
@@ -14,4 +14,6 @@ class GithubPageParser {
   }
 }
 
-export default new GithubPageParser();
+// checking the github page parser type is compatible with parser type
+const p: Parser = new GithubPageParser();
+export default p;
