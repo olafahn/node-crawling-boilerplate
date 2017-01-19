@@ -1,14 +1,14 @@
 // @flow
 import DbAdapter from './DbAdapter';
 import Fetcher from './Fetcher';
-import Parser from './Parser';
+import GithubPageParser from './parsers/GithubPageParser';
 
 const dbAdapter = new DbAdapter('mongodb://localhost/mongodb_tutorial');
 
 setTimeout(() => {
   console.log(dbAdapter.isDbConnected);
   Fetcher.fetch('https://github.com/olafahn').then((res: string) => {
-    Parser.parseGithubPage(res);
+    GithubPageParser.parse(res);
   }, console.log);
 }, 500);
 
