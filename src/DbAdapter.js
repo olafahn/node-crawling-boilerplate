@@ -4,7 +4,7 @@ import HtmlResponse from './models/HtmlResponse';
 
 const dbAdapterInstances = {};
 class DbAdapter {
-  static getInstance(uri: string): any {
+  static getInstance(uri: string): DbAdapter {
     if (dbAdapterInstances[uri] === undefined) {
       const dbAdapter = new DbAdapter(uri);
       dbAdapterInstances[uri] = dbAdapter;
@@ -41,11 +41,13 @@ class DbAdapter {
 
   // implementations
   saveHtmlResponse(url: string, body: string) {
+    console.log('saveHtmlResponse', url);
     if (!this.isDbConnected) throw url; // TODO better exception
     const html = new HtmlResponse();
     html.url = url;
     html.body = body;
     html.save();
+    console.log('saved!', url);
   }
   getHtmlResponses(): Promise<*> {
     if (!this.isDbConnected) throw 1; // eslint-disable-line

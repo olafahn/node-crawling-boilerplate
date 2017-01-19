@@ -14,4 +14,4 @@ setTimeout(() => {
 
 setTimeout(() => {
   dbAdapter.close();
-}, 1000);
+}, 1500);
