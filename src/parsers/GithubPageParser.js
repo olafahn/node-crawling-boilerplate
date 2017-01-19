@@ -14,6 +14,6 @@ class GithubPageParser {
   }
 }
 
-// checking the github page parser type is compatible with parser type
+// checking whether the github page parser type is compatible with parser type
 const p: Parser = new GithubPageParser();
 export default p;
