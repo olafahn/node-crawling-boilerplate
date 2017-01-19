@@ -27,6 +27,7 @@ class Fetcher {
           // cache hitda hit
           console.error('resolve', htmlResponse.body);
           resolve(htmlResponse.body);
+          // TODO caching
         }
       });
     });
