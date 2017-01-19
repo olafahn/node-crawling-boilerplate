@@ -6,7 +6,7 @@ const dbAdapter = new DbAdapter('mongodb://localhost/mongodb_tutorial');
 
 setTimeout(() => {
   console.log(dbAdapter.isDbConnected);
-  Fetcher.fetch('http://naver.com').then(console.log, console.log);
+  Fetcher.fetch('https://github.com/olafahn').then(console.log, console.log);
 }, 500);
 
 setTimeout(() => {

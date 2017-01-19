@@ -1,6 +1,7 @@
 [ignore]
 .git
 # to ignore inner flow errors
+build
 
 [options]
 module.system.node.resolve_dirname=node_modules

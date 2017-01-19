@@ -15,7 +15,7 @@ class Fetcher {
           reject(err);
         } else if (!htmlResponse || !htmlResponse.body) {
           // it means not cached!
-          rp('http://naver.com')
+          rp(url)
           .then((...a: any) => {
             console.error('err2', a);
             resolve(...a);
